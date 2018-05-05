@@ -1,4 +1,4 @@
-# Tinkov
+# Tinkov [![Known Vulnerabilities](https://snyk.io/test/github/rdlf0/tinkov.info/badge.svg?targetFile=package.json)](https://snyk.io/test/github/rdlf0/tinkov.info?targetFile=package.json)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
