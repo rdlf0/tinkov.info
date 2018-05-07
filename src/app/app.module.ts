@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
-import { ListComponent as FontListComponent } from './fonts/list/list.component';
+import { ListComponent as FontListComponent } from './components/fonts/list/list.component';
 
 const routes: Routes = [
     { path: 'fonts', component: FontListComponent }
