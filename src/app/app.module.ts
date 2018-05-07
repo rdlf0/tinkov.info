@@ -2,15 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FontListComponent } from './font-list/font-list.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ListComponent as FontListComponent } from './fonts/list/list.component';
+
+const routes: Routes = [
+    { path: 'fonts', component: FontListComponent }
+];
 
 @NgModule({
     declarations: [
         AppComponent,
-        FontListComponent
+        FontListComponent,
     ],
     imports: [
-        BrowserModule
+        BrowserModule,
+        RouterModule.forRoot(routes, { enableTracing: true })
     ],
     providers: [],
     bootstrap: [AppComponent]

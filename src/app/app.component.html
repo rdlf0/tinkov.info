@@ -3,10 +3,12 @@
         LOGO
     </a>
     <div id="breadcrumbs">BREADCRUMBS</div>
-    <nav>MAIN NAVIGATION</nav>
+    <nav>
+        <a routerLink="/fonts">Fonts</a>
+    </nav>
 </header>
 <main>
-    Main content will come here
+    <router-outlet></router-outlet>
 </main>
 <footer>
     <div id="copyright">&copy; {{now | date:'yyyy'}} Tinkov</div>
