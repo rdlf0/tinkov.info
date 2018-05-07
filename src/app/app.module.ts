@@ -7,15 +7,18 @@ import { ListComponent as FontListComponent } from './components/fonts/list/list
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 const routes: Routes = [
-    { path: 'fonts', component: FontListComponent }
+    { path: 'fonts', component: FontListComponent },
+    { path: '', component: HomepageComponent }
 ];
 
 @NgModule({
     declarations: [
         AppComponent,
         FontListComponent,
+        HomepageComponent,
     ],
     imports: [
         BrowserModule,
