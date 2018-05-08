@@ -9,11 +9,15 @@ import { Font } from '../../../models/font';
 })
 export class ListComponent implements OnInit {
 
-    private fonts: Font[];
+    fonts: Font[];
 
     constructor(private fontService: FontService) { }
 
     ngOnInit() {
+        this.getFonts();
+    }
+
+    getFonts(): void {
         this.fontService.getFonts().subscribe(
             fonts => this.fonts = fonts
         );

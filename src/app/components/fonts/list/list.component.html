@@ -1,5 +1,6 @@
+<h2>Fonts</h2>
 <ul>
     <li *ngFor="let font of fonts">
-        ID: {{ font.id }}, name: {{font.name}}
+        <a routerLink="/fonts/{{font.id}}">ID: {{ font.id }}, name: {{font.name}}</a>
     </li>
 </ul>

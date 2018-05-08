@@ -8,17 +8,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { DetailComponent as FontDetailComponent } from './components/fonts/detail/detail.component';
 
 const routes: Routes = [
     { path: 'fonts', component: FontListComponent },
-    { path: '', component: HomepageComponent }
+    { path: 'fonts/:id', component: FontDetailComponent },
+    { path: '', component: HomepageComponent, pathMatch: 'full' }
 ];
 
 @NgModule({
     declarations: [
         AppComponent,
-        FontListComponent,
         HomepageComponent,
+        FontListComponent,
+        FontDetailComponent,
     ],
     imports: [
         BrowserModule,
