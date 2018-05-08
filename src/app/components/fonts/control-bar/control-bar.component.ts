@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-control-bar',
-  templateUrl: './control-bar.component.html',
-  styleUrls: ['./control-bar.component.css']
+    selector: 'app-control-bar',
+    templateUrl: './control-bar.component.html',
+    styleUrls: ['./control-bar.component.css']
 })
 export class ControlBarComponent implements OnInit {
 
-  constructor() { }
+    fontSize = 22;
 
-  ngOnInit() {
-  }
+    constructor() { }
 
+    ngOnInit() {
+    }
+
+    fontUp(): void {
+        this.fontSize++;
+    }
+
+    fontDown(): void {
+        this.fontSize--;
+    }
 }
