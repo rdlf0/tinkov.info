@@ -3,12 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
-import { ListComponent as FontListComponent } from './components/fonts/list/list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { ListComponent as FontListComponent } from './components/fonts/list/list.component';
 import { DetailComponent as FontDetailComponent } from './components/fonts/detail/detail.component';
+import { ControlBarComponent } from './components/fonts/control-bar/control-bar.component';
 
 const routes: Routes = [
     { path: 'fonts', component: FontListComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
         HomepageComponent,
         FontListComponent,
         FontDetailComponent,
+        ControlBarComponent,
     ],
     imports: [
         BrowserModule,
