@@ -11,6 +11,7 @@ import { Font } from '../../../models/font';
 export class DetailComponent implements OnInit {
 
     font: Font;
+    visibleTab = 'styles';
 
     constructor(
         private route: ActivatedRoute,
@@ -26,5 +27,9 @@ export class DetailComponent implements OnInit {
         this.fontService.getFont(id).subscribe(
             font => this.font = font
         );
+    }
+
+    showTab(tabID: string): void {
+        this.visibleTab = tabID;
     }
 }

@@ -1,8 +1,35 @@
 <ng-container *ngIf="font">
     <h2>{{font.name}}</h2>
-    <app-control-bar #controlbar></app-control-bar>
-    <div>
-        <p [style.font-size.px]="controlbar.fontSize">This is all the info we have for this font:</p>
-        <pre>{{font|json}}</pre>
-    </div>
+    <ul>
+        <li>
+            <div (click)="showTab('styles')">Styles</div>
+        </li>
+        <li>
+            <div (click)="showTab('details')">Details</div>
+        </li>
+        <li>
+            <div (click)="showTab('inspiration')">Inspiration</div>
+        </li>
+        <li>
+            <div (click)="showTab('try')">Try</div>
+        </li>
+    </ul>
+
+    <ng-container [ngSwitch]="visibleTab">
+        <ng-container *ngSwitchCase="'styles'">
+            <app-control-bar #controlbar></app-control-bar>
+            <div>
+                <p [style.font-size.px]="controlbar.fontSize">This is all the info we have for this font:</p>
+                <pre>{{font|json}}</pre>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'details'">DETAILS WILL BE SHOWN HERE</ng-container>
+        <ng-container *ngSwitchCase="'inspiration'">SOME INSPIRATION STUFF</ng-container>
+        <ng-container *ngSwitchCase="'try'">THE PLAYGROUND</ng-container>
+
+    </ng-container>
+
+
+
 </ng-container>
