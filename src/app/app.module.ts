@@ -10,6 +10,10 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { ListComponent as FontListComponent } from './components/fonts/list/list.component';
 import { DetailComponent as FontDetailComponent } from './components/fonts/detail/detail.component';
 import { ControlBarComponent } from './components/fonts/control-bar/control-bar.component';
+import { StylesComponent } from './components/fonts/detail/styles/styles.component';
+import { DetailsComponent } from './components/fonts/detail/details/details.component';
+import { InspirationComponent } from './components/fonts/detail/inspiration/inspiration.component';
+import { TryComponent } from './components/fonts/detail/try/try.component';
 
 const routes: Routes = [
     { path: 'fonts', component: FontListComponent },
@@ -24,6 +28,10 @@ const routes: Routes = [
         FontListComponent,
         FontDetailComponent,
         ControlBarComponent,
+        StylesComponent,
+        DetailsComponent,
+        InspirationComponent,
+        TryComponent,
     ],
     imports: [
         BrowserModule,
