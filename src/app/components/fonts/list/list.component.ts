@@ -3,7 +3,6 @@ import { FontService } from '../../../services/font.service';
 import { Font } from '../../../models/font';
 
 @Component({
-    selector: 'app-list',
     templateUrl: './list.component.html',
     styleUrls: ['./list.component.css']
 })

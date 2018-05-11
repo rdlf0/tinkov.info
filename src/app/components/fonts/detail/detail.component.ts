@@ -4,7 +4,6 @@ import { FontService } from '../../../services/font.service';
 import { Font } from '../../../models/font';
 
 @Component({
-    selector: 'app-detail',
     templateUrl: './detail.component.html',
     styleUrls: ['./detail.component.css']
 })
