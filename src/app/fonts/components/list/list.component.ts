@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FontService } from '../../../services/font.service';
-import { Font } from '../../../models/font';
+import { FontService } from '../../services/font.service';
+import { Font } from '../../models/font';
 
 @Component({
     templateUrl: './list.component.html',

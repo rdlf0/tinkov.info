@@ -3,9 +3,7 @@ import { Observable } from 'rxjs';
 import { Font } from '../models/font';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class FontService {
 
     private apiUrl = 'api/fonts';

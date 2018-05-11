@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Font } from '../../../../models/font';
+import { Font } from '../../../models/font';
 
 @Component({
     selector: 'app-font-detail-styles',
