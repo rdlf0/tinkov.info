@@ -7,14 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { FontsModule } from './fonts/fonts.module';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        HomepageComponent
-    ],
     imports: [
         BrowserModule,
         FontsModule,
         AppRoutingModule
+    ],
+    declarations: [
+        AppComponent,
+        HomepageComponent
     ],
     providers: [],
     bootstrap: [AppComponent]

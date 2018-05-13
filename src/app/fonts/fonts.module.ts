@@ -15,6 +15,13 @@ import { TryComponent } from './components/detail/try/try.component';
 import { FontService } from './services/font.service';
 
 @NgModule({
+    imports: [
+        CommonModule,
+        HttpClientModule,
+        // Remove when the backend is ready
+        HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false }),
+        FontsRoutingModule,
+    ],
     declarations: [
         FontsComponent,
         FontListComponent,
@@ -24,13 +31,6 @@ import { FontService } from './services/font.service';
         InspirationComponent,
         DetailsComponent,
         TryComponent
-    ],
-    imports: [
-        CommonModule,
-        HttpClientModule,
-        // Remove when the backend is ready
-        HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false }),
-        FontsRoutingModule,
     ],
     providers: [
         FontService
