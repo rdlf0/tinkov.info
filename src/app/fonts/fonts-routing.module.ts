@@ -23,7 +23,7 @@ const fontsRoutes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(fontsRoutes)
+        RouterModule.forChild(fontsRoutes)
     ],
     exports: [
         RouterModule
