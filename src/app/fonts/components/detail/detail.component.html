@@ -1,4 +1,4 @@
-<ng-container *ngIf="font">
+<ng-container *ngIf="font$ | async as font">
     <h2>{{font.name}}</h2>
     <ul id="font-tabs">
         <li>

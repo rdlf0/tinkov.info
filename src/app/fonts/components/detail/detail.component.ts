@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { FontService } from '../../services/font.service';
 import { Font } from '../../models/font';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
     templateUrl: './detail.component.html',
@@ -9,11 +11,11 @@ import { Font } from '../../models/font';
 })
 export class DetailComponent implements OnInit {
 
-    font: Font;
+    font$: Observable<Font>;
     visibleTab = 'styles';
 
     constructor(
-        private route: ActivatedRoute,
+        private activatedRoute: ActivatedRoute,
         private fontService: FontService
     ) { }
 
@@ -22,9 +24,8 @@ export class DetailComponent implements OnInit {
     }
 
     getFont(): void {
-        const id = +this.route.snapshot.paramMap.get('id');
-        this.fontService.getFont(id).subscribe(
-            font => this.font = font
+        this.font$ = this.activatedRoute.paramMap.pipe(
+            switchMap((params: ParamMap) => this.fontService.getFont(+params.get('id')))
         );
     }
 
