@@ -1,29 +1,33 @@
 <header>
-    <a routerLink="/">
-        LOGO
-    </a>
-    <app-breadcrumb></app-breadcrumb>
-    <nav>
-        <ul>
-            <li>
-                <a routerLink="/fonts">Fonts</a>
-            </li>
-            <li>
-                <a href="#">Info</a>
-            </li>
-            <li>
-                <a href="#">User</a>
-            </li>
-            <li>
-                <a href="#">Cart</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="main-wrapper">
+        <a id="logo" routerLink="/">
+            <img src="../assets/logo.svg" alt="Tinkov.info" width="34px" height="26px" />
+        </a>
+        <app-breadcrumb></app-breadcrumb>
+        <nav>
+            <ul>
+                <li>
+                    <a routerLink="/fonts" routerLinkActive="active">Fonts</a>
+                </li>
+                <li>
+                    <a href="#" routerLinkActive="active">Info</a>
+                </li>
+                <li>
+                    <a href="#" routerLinkActive="active">User</a>
+                </li>
+                <li>
+                    <a href="#" routerLinkActive="active">Cart</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 <main>
     <router-outlet></router-outlet>
 </main>
 <footer>
-    <div id="copyright">&copy; {{now | date:'yyyy'}} Tinkov</div>
-    <div class="help">HELP ICON</div>
+    <div class="main-wrapper">
+        <div id="copyright">&copy; {{now | date:'yyyy'}} Tinkov</div>
+        <div class="help">HELP ICON</div>
+    </div>
 </footer>

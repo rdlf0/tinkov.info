@@ -1,0 +1,27 @@
+ul {
+    display: block;
+    overflow: hidden;
+    margin-left: 15px;
+    float: left;
+}
+
+li {
+    display: block;
+    float: left;
+    font-size: 12px;
+    margin-left: 8px;
+    margin-top: 4px;
+}
+
+li a {
+    color: #cccccc;
+    padding-left: 8px;
+}
+
+li .last {
+    padding-left: 8px;
+}
+
+li .divider {
+    color: #cccccc;
+}

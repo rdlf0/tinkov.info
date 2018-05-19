@@ -1,9 +1,11 @@
-<h2>Fonts</h2>
-<app-control-bar #controlbar></app-control-bar>
-<ul>
-    <li *ngFor="let font of fonts">
-        <a routerLink="/fonts/{{font.id}}">
-            ID: {{ font.id }}, name: <span [style.font-size.px]="controlbar.fontSize">{{font.name}}</span>
-        </a>
-    </li>
-</ul>
+<div class="main-wrapper">
+    <h2>Fonts</h2>
+    <app-control-bar #controlbar></app-control-bar>
+    <ul>
+        <li *ngFor="let font of fonts">
+            <a routerLink="/fonts/{{font.id}}">
+                ID: {{ font.id }}, name: <span [style.font-size.px]="controlbar.fontSize">{{font.name}}</span>
+            </a>
+        </li>
+    </ul>
+</div>

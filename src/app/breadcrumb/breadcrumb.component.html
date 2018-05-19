@@ -3,7 +3,8 @@
         <a routerLink="/">Home</a>
     </li>
     <li *ngFor="let breadcrumb of breadcrumbs; let last = last">
-        <span *ngIf="last">{{breadcrumb.label}}</span>
+        <span class="divider">/</span>
+        <span *ngIf="last" class="last">{{breadcrumb.label}}</span>
         <a *ngIf="!last" [routerLink]="[breadcrumb.url, breadcrumb.params]">{{breadcrumb.label}}</a>
     </li>
 </ul>
