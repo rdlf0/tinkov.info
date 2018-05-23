@@ -41,3 +41,24 @@ nav ul li a {
 nav ul li a.active {
     border-bottom: 2px solid #1a1a1a;
 }
+
+footer {
+    background-color: #fafafa;
+    padding: 45px 0px;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+footer #copyright {
+    display: block;
+    float: left;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+footer .help {
+    display: block;
+    float: right;
+    font-size: 14px;
+}

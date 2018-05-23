@@ -1,0 +1,13 @@
+#controlBar {
+    display: block;
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 80px;
+    background-color: #fafafa;
+    padding: 30px 40px;
+}
+
+.widget {
+    display: block;
+    float: left;
+}
