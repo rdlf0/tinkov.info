@@ -25,7 +25,7 @@ export class DetailComponent implements OnInit {
 
     getFont(): void {
         this.font$ = this.activatedRoute.paramMap.pipe(
-            switchMap((params: ParamMap) => this.fontService.getFont(+params.get('id')))
+            switchMap((params: ParamMap) => this.fontService.getFontByProperty('slug', params.get('slug')))
         );
     }
 

@@ -91,7 +91,7 @@ export class BreadcrumbComponent implements OnInit {
 
         switch (object) {
             case Font:
-                this.fontService.getFont(+params['id'])
+                this.fontService.getFontByProperty('slug', params['slug'])
                     .subscribe(
                         font => this.setDynamicLabel(property, font.name)
                     );

@@ -21,7 +21,7 @@ const fontsRoutes: Routes = [
                 }
             },
             {
-                path: ':id',
+                path: ':slug',
                 component: DetailComponent,
                 data: {
                     breadcrumb: { label: ':name', model: Font }

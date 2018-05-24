@@ -18,4 +18,9 @@ export class FontService {
         const url = `${this.apiUrl}/${id}`;
         return this.http.get<Font>(url);
     }
+
+    getFontByProperty(property: string, value: string): Observable<Font> {
+        const url = `${this.apiUrl}/?${property}=${value}`;
+        return this.http.get<Font>(url).map(fonts => fonts[0]);
+    }
 }
