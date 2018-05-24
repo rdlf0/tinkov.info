@@ -3,8 +3,15 @@
     <app-control-bar #controlbar></app-control-bar>
     <ul>
         <li *ngFor="let font of fonts">
+            <textarea
+                [style.font-family]="[font.name+font.listSettings.style, 'sans-serif']"
+                [style.font-size.px]="controlbar.fontSize">{{font.listSettings.text}}</textarea>
             <a routerLink="/fonts/{{font.slug}}">
-                ID: {{ font.id }}, name: <span [style.font-size.px]="controlbar.fontSize">{{font.name}}</span>
+                <span class="arrow">?</span>
+                <span class="info">
+                    <span class="fontName">{{font.name}}</span>
+                    <span class="fontStyles">{{font.styles.length}} Styles / {{font.stylesFree.length}} Free</span>
+                </span>
             </a>
         </li>
     </ul>

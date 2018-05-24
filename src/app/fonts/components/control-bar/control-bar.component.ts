@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
     styleUrls: ['./control-bar.component.css']
 })
 export class ControlBarComponent {
-    fontSize = 22;
+    fontSize = 96;
 }
