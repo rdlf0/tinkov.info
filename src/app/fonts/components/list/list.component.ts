@@ -4,7 +4,7 @@ import { Font } from '../../models/font';
 
 @Component({
     templateUrl: './list.component.html',
-    styleUrls: ['./list.component.css']
+    styleUrls: ['./list.component.css', '../../../../../DATA/all-fonts.css']
 })
 export class ListComponent implements OnInit {
 

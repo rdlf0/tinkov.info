@@ -13,13 +13,12 @@ li {
     margin-left: 200px;
 }
 
-textarea {
+.font-preview {
     display: block;
     width: 100%;
     min-height: 200px;
     border: 0 none;
     padding: 0;
-    resize: none;
     outline: none;
 }
 
@@ -27,6 +26,7 @@ li a {
     display: block;
     clear: both;
     overflow: hidden;
+    margin-top: 10px;
 }
 
 .arrow {
@@ -46,13 +46,13 @@ li a {
     font-size: 14px;
 }
 
-.info .fontName {
+.info .font-name {
     display: block;
     font-weight: 600;
     margin-bottom: 3px;
 }
 
-.info .fontStyles {
+.info .font-styles {
     display: block;
     clear: both;
     font-weight: 100;

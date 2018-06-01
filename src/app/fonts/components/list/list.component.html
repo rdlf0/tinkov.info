@@ -3,16 +3,23 @@
     <app-control-bar #controlbar></app-control-bar>
     <ul>
         <li *ngFor="let font of fonts">
-            <textarea
-                [style.font-family]="[font.name+font.listSettings.style, 'sans-serif']"
-                [style.font-size.px]="controlbar.fontSize">{{font.listSettings.text}}</textarea>
+            <div class="font-preview" contenteditable="true"
+                 [style.font-family]="[font.name, 'sans-serif']"
+                 [style.font-weight]="font.list.preview.weight"
+                 [style.font-style]="font.list.preview.style"
+                 [style.font-size.px]="controlbar.fontSize"
+                 [style.line-height.px]="controlbar.lineHeight">
+                {{font.list.preview.text}}
+            </div>
+
             <a routerLink="/fonts/{{font.slug}}">
                 <span class="arrow">?</span>
                 <span class="info">
-                    <span class="fontName">{{font.name}}</span>
-                    <span class="fontStyles">{{font.styles.length}} Styles / {{font.stylesFree.length}} Free</span>
+                    <span class="font-name">{{font.name}}</span>
+                    <span class="font-styles">{{font.styles.length}} Styles / {{font.stylesFree.length}} Free</span>
                 </span>
             </a>
+
         </li>
     </ul>
 </div>
