@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class ControlBarComponent {
     fontSize = 96;
+    lineHeight = 100;
 }

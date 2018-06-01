@@ -1,7 +1,14 @@
-<div id="controlBar">
+<div id="control_bar">
     <div class="widget">
+        Font Size
         <div (click)="fontSize=fontSize+1">[+]</div>
         <div (click)="fontSize=fontSize-1">[-]</div>
         {{fontSize}}
+    </div>
+    <div class="widget">
+        Line Height
+        <div (click)="lineHeight=lineHeight+1">[+]</div>
+        <div (click)="lineHeight=lineHeight-1">[-]</div>
+        {{lineHeight}}
     </div>
 </div>
