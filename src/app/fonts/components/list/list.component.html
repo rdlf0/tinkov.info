@@ -3,7 +3,7 @@
     <app-control-bar #controlbar></app-control-bar>
     <ul>
         <li *ngFor="let font of fonts">
-            <div class="font-preview" contenteditable="true"
+            <div class="font-preview" contenteditable="true" spellcheck="false"
                  [style.font-family]="[font.name, 'sans-serif']"
                  [style.font-weight]="font.list.preview.weight"
                  [style.font-style]="font.list.preview.style"
