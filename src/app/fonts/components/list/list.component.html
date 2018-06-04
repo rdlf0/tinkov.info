@@ -3,7 +3,17 @@
     <app-control-bar #controlbar></app-control-bar>
     <ul>
         <li *ngFor="let font of fonts">
-            <div class="font-preview" contenteditable="true" spellcheck="false"
+            <div class="style-changer">
+                <select
+                    (change)="fontPreview.style.fontFamily = [font.name + $event.target.value, font.alternatives.join(',')]"
+                >
+                    <option *ngFor="let style of font.styles" [selected]="style === font.list.preview.style">
+                        {{style}}
+                    </option>
+                </select>
+            </div>
+
+            <div class="font-preview" contenteditable="true" spellcheck="false" #fontPreview
                  [style.font-family]="[font.name + font.list.preview.style, font.alternatives.join(',')]"
                  [style.font-size.px]="controlbar.fontSize"
                  [style.line-height.px]="controlbar.lineHeight"
