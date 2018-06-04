@@ -6,6 +6,9 @@ export const fonts: Font[] = [
         name: 'Gilroy',
         slug: 'gilroy',
         directory: 'Gilroy',
+        alternatives: [
+            'sans-serif'
+        ],
         styles: [
             'Thin',
             'ThinItalic',
@@ -37,8 +40,7 @@ export const fonts: Font[] = [
             preview: {
                 text: 'Ladies & Gentleman',
                 transform: 'uppercase',
-                weight: 300,
-                style: 'normal'
+                style: 'Light'
             }
         }
     }

@@ -3,13 +3,13 @@ export class Font {
     name: string;
     slug: string;
     directory: string;
+    alternatives: string[];
     styles: string[];
     stylesFree: string[];
     list: {
         preview: {
             text: string;
             transform: string;
-            weight: number | string;
             style: string;
         }
     };

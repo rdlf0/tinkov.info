@@ -4,11 +4,10 @@
     <ul>
         <li *ngFor="let font of fonts">
             <div class="font-preview" contenteditable="true" spellcheck="false"
-                 [style.font-family]="[font.name, 'sans-serif']"
-                 [style.font-weight]="font.list.preview.weight"
-                 [style.font-style]="font.list.preview.style"
+                 [style.font-family]="[font.name + font.list.preview.style, font.alternatives.join(',')]"
                  [style.font-size.px]="controlbar.fontSize"
-                 [style.line-height.px]="controlbar.lineHeight">
+                 [style.line-height.px]="controlbar.lineHeight"
+            >
                 {{font.list.preview.text}}
             </div>
 
