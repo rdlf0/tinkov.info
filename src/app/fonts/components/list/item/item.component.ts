@@ -25,4 +25,10 @@ export class ItemComponent {
     constructor(
         private elementRef: ElementRef
     ) {}
+
+    generateFontFamily(style = this.font.list.preview.style): string {
+        const fontNameClear = this.font.name.replace(' ', '');
+        const fontStyle = fontNameClear + style;
+        return fontStyle + ',' + this.font.alternatives.join(',');
+    }
 }

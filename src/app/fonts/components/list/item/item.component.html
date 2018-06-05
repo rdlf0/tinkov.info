@@ -1,8 +1,7 @@
 <div class="style-changer">
     <select
         [hidden]="!styleChangerVisible"
-        (change)="fontPreview.style.fontFamily = [font.name + $event.target.value, font.alternatives.join(',')]"
-    >
+        (change)="fontPreview.style.fontFamily = generateFontFamily($event.target.value)">
         <option *ngFor="let style of font.styles" [selected]="style === font.list.preview.style">
             {{style}}
         </option>
@@ -13,7 +12,7 @@
      class="font-preview"
      contenteditable="true"
      spellcheck="false"
-     [style.font-family]="[font.name + font.list.preview.style, font.alternatives.join(',')]"
+     [style.font-family]="generateFontFamily()"
      [style.font-size.px]="controlBar.fontSize"
      [style.line-height.px]="controlBar.lineHeight"
      (focus)="styleChangerVisible = true"
@@ -25,6 +24,9 @@
     <span class="arrow">?</span>
     <span class="info">
         <span class="font-name">{{font.name}}</span>
-        <span class="font-styles">{{font.styles.length}} Styles / {{font.stylesFree.length}} Free</span>
+        <span class="font-styles">
+            {{font.styles.length}} Styles
+            <ng-container *ngIf="font.stylesFree.length > 0"> / {{font.stylesFree.length}} Free</ng-container>
+        </span>
     </span>
 </a>
