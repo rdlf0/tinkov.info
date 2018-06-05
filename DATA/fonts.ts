@@ -60,7 +60,7 @@ export const fonts: Font[] = [
             'Light',
             'LightItalic',
             'Regular',
-            'RegularItalic',
+            'Italic',
             'Medium',
             'MediumItalic',
             'SemiBold',

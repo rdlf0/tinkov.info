@@ -67,9 +67,9 @@
 
 @font-face {
     font-family: 'RidleyGroteskItalic';
-    src: url('RidleyGrotesk/RidleyGrotesk-RegularItalic.eot');
-    src: url('RidleyGrotesk/RidleyGrotesk-RegularItalic.woff') format('woff'),
-    url('RidleyGrotesk/RidleyGrotesk-RegularItalic.woff2') format('woff2');
+    src: url('RidleyGrotesk/RidleyGrotesk-Italic.eot');
+    src: url('RidleyGrotesk/RidleyGrotesk-Italic.woff') format('woff'),
+    url('RidleyGrotesk/RidleyGrotesk-Italic.woff2') format('woff2');
     font-style: normal;
     font-weight: normal;
 }
