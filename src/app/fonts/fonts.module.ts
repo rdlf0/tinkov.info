@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FontsRoutingModule } from './fonts-routing.module';
 import { ListComponent as FontListComponent } from './components/list/list.component';
+import { ItemComponent as FontListItemComponent } from './components/list/item/item.component';
 import { DetailComponent as FontDetailComponent } from './components/detail/detail.component';
 import { FontsComponent } from './fonts.component';
 import { ControlBarComponent } from './components/control-bar/control-bar.component';
@@ -25,6 +26,7 @@ import { FontService } from './services/font.service';
     declarations: [
         FontsComponent,
         FontListComponent,
+        FontListItemComponent,
         FontDetailComponent,
         ControlBarComponent,
         StylesComponent,

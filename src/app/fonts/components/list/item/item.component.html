@@ -1,0 +1,30 @@
+<div class="style-changer">
+    <select
+        [hidden]="!styleChangerVisible"
+        (change)="fontPreview.style.fontFamily = [font.name + $event.target.value, font.alternatives.join(',')]"
+    >
+        <option *ngFor="let style of font.styles" [selected]="style === font.list.preview.style">
+            {{style}}
+        </option>
+    </select>
+</div>
+
+<div #fontPreview
+     class="font-preview"
+     contenteditable="true"
+     spellcheck="false"
+     [style.font-family]="[font.name + font.list.preview.style, font.alternatives.join(',')]"
+     [style.font-size.px]="controlBar.fontSize"
+     [style.line-height.px]="controlBar.lineHeight"
+     (focus)="styleChangerVisible = true"
+>
+    {{font.list.preview.text}}
+</div>
+
+<a routerLink="/fonts/{{font.slug}}">
+    <span class="arrow">?</span>
+    <span class="info">
+        <span class="font-name">{{font.name}}</span>
+        <span class="font-styles">{{font.styles.length}} Styles / {{font.stylesFree.length}} Free</span>
+    </span>
+</a>
