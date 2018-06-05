@@ -83,5 +83,27 @@ export const fonts: Font[] = [
                 style: 'Regular'
             }
         }
+    },
+    {
+        id: 3,
+        name: 'Maya Script',
+        slug: 'maya-script',
+        directory: 'MayaScript',
+        alternatives: [
+            'sans-serif'
+        ],
+        styles: [
+            'Regular',
+            'Bold',
+            'Ornaments'
+        ],
+        stylesFree: [],
+        list: {
+            preview: {
+                text: 'Save adasha and the FOREST',
+                transform: 'none',
+                style: 'Regular'
+            }
+        }
     }
 ];

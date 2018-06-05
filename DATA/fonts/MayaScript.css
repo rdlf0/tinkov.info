@@ -1,0 +1,32 @@
+/* 400 */
+@font-face {
+    font-family: 'MayaScriptRegular';
+    src: url('MayaScript/MayaScript-Regular.eot');
+    src: url('MayaScript/MayaScript-Regular.woff') format('woff'),
+    url('MayaScript/MayaScript-Regular.woff2') format('woff2'),
+    url('MayaScript/MayaScript-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* 700 */
+@font-face {
+    font-family: 'MayaScriptBold';
+    src: url('MayaScript/MayaScript-Bold.eot');
+    src: url('MayaScript/MayaScript-Bold.woff') format('woff'),
+    url('MayaScript/MayaScript-Bold.woff2') format('woff2'),
+    url('MayaScript/MayaScript-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Ornaments */
+@font-face {
+    font-family: 'MayaScriptOrnaments';
+    src: url('MayaScript/MayaScript-Ornaments.eot');
+    src: url('MayaScript/MayaScript-Ornaments.woff') format('woff'),
+    url('MayaScript/MayaScript-Ornaments.woff2') format('woff2'),
+    url('MayaScript/MayaScript-Ornaments.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
