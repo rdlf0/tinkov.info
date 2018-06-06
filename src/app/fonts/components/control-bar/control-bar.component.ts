@@ -9,6 +9,7 @@ export class ControlBarComponent {
 
     fontSize: number;
     lineHeight: number;
+    letterSpacing: number;
 
     handleFontSize(value: number): void {
         this.fontSize = value;
@@ -16,6 +17,10 @@ export class ControlBarComponent {
 
     handleLineHeight(value: number): void {
         this.lineHeight = value;
+    }
+
+    handleLetterSpacing(value: number): void {
+        this.letterSpacing = value;
     }
 
 }
