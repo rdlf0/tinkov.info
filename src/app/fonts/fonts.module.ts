@@ -14,6 +14,8 @@ import { InspirationComponent } from './components/detail/inspiration/inspiratio
 import { DetailsComponent } from './components/detail/details/details.component';
 import { TryComponent } from './components/detail/try/try.component';
 import { FontService } from './services/font.service';
+import { SliderComponent as WidgetSlider } from './components/control-bar/widgets/slider/slider.component';
+import { MatSliderModule } from '@angular/material';
 
 @NgModule({
     imports: [
@@ -21,6 +23,7 @@ import { FontService } from './services/font.service';
         HttpClientModule,
         // Remove when the backend is ready
         HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false }),
+        MatSliderModule,
         FontsRoutingModule,
     ],
     declarations: [
@@ -32,7 +35,8 @@ import { FontService } from './services/font.service';
         StylesComponent,
         InspirationComponent,
         DetailsComponent,
-        TryComponent
+        TryComponent,
+        WidgetSlider
     ],
     providers: [
         FontService

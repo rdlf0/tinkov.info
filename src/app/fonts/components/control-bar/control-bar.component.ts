@@ -6,6 +6,16 @@ import { Component } from '@angular/core';
     styleUrls: ['./control-bar.component.css']
 })
 export class ControlBarComponent {
-    fontSize = 96;
-    lineHeight = 100;
+
+    fontSize: number;
+    lineHeight: number;
+
+    handleFontSize(value: number): void {
+        this.fontSize = value;
+    }
+
+    handleLineHeight(value: number): void {
+        this.lineHeight = value;
+    }
+
 }

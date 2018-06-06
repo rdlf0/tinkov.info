@@ -1,14 +1,19 @@
 <div id="control_bar">
-    <div class="widget">
-        Font Size
-        <div (click)="fontSize=fontSize+1">[+]</div>
-        <div (click)="fontSize=fontSize-1">[-]</div>
-        {{fontSize}}
-    </div>
-    <div class="widget">
-        Line Height
-        <div (click)="lineHeight=lineHeight+1">[+]</div>
-        <div (click)="lineHeight=lineHeight-1">[-]</div>
-        {{lineHeight}}
-    </div>
+    <app-control-bar-widget-slider
+        [label]="'S'"
+        [units]="'px'"
+        [defaultValue]="96"
+        [max]="120"
+        [min]="80"
+        [step]="1"
+        (value)="handleFontSize($event)"></app-control-bar-widget-slider>
+
+    <app-control-bar-widget-slider
+        [label]="'LH'"
+        [units]="'px'"
+        [defaultValue]="100"
+        [max]="124"
+        [min]="84"
+        [step]="1"
+        (value)="handleLineHeight($event)"></app-control-bar-widget-slider>
 </div>
