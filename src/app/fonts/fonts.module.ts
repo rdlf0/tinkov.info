@@ -17,6 +17,7 @@ import { FontService } from './services/font.service';
 import { SliderComponent as WidgetSlider } from './components/control-bar/widgets/slider/slider.component';
 import { MatSliderModule } from '@angular/material';
 import { TextAlignComponent as WidgetTextAlign } from './components/control-bar/widgets/text-align/text-align.component';
+import { InverterComponent as WidgetInverter } from './components/control-bar/widgets/inverter/inverter.component';
 
 @NgModule({
     imports: [
@@ -38,7 +39,8 @@ import { TextAlignComponent as WidgetTextAlign } from './components/control-bar/
         DetailsComponent,
         TryComponent,
         WidgetSlider,
-        WidgetTextAlign
+        WidgetTextAlign,
+        WidgetInverter
     ],
     providers: [
         FontService

@@ -11,6 +11,7 @@ export class ControlBarComponent {
     lineHeight: number;
     letterSpacing: number;
     textAlign: string;
+    invertColors: boolean;
 
     handleFontSize(value: number): void {
         this.fontSize = value;
@@ -28,4 +29,7 @@ export class ControlBarComponent {
         this.textAlign = value;
     }
 
+    handleInvertColors(value: boolean): void {
+        this.invertColors = value;
+    }
 }
