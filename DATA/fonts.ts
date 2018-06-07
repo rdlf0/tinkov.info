@@ -39,7 +39,6 @@ export const fonts: Font[] = [
         list: {
             preview: {
                 text: 'Ladies & Gentleman',
-                transform: 'uppercase',
                 style: 'Light'
             }
         }
@@ -79,7 +78,6 @@ export const fonts: Font[] = [
         list: {
             preview: {
                 text: 'Gane/4 30.5ml',
-                transform: 'none',
                 style: 'Regular'
             }
         }
@@ -101,7 +99,6 @@ export const fonts: Font[] = [
         list: {
             preview: {
                 text: 'Save adasha and the FOREST',
-                transform: 'none',
                 style: 'Regular'
             }
         }

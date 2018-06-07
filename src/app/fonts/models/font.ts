@@ -9,7 +9,6 @@ export class Font {
     list: {
         preview: {
             text: string;
-            transform: string;
             style: string;
         }
     };
