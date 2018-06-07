@@ -1,5 +1,6 @@
 <div id="control_bar">
-    <app-control-bar-widget-slider class="widget"
+    <app-control-bar-widget-slider
+        class="widget"
         [label]="'S'"
         [units]="'px'"
         [defaultValue]="96"
@@ -8,7 +9,8 @@
         [step]="1"
         (value)="handleFontSize($event)"></app-control-bar-widget-slider>
 
-    <app-control-bar-widget-slider class="widget"
+    <app-control-bar-widget-slider
+        class="widget"
         [label]="'LH'"
         [units]="'px'"
         [defaultValue]="100"
@@ -17,7 +19,8 @@
         [step]="1"
         (value)="handleLineHeight($event)"></app-control-bar-widget-slider>
 
-    <app-control-bar-widget-slider class="widget"
+    <app-control-bar-widget-slider
+        class="widget"
         [label]="'LS'"
         [units]="'px'"
         [defaultValue]="0"
@@ -25,4 +28,9 @@
         [max]="20"
         [step]="1"
         (value)="handleLetterSpacing($event)"></app-control-bar-widget-slider>
+
+    <app-control-bar-widget-text-align
+        class="widget"
+        [defaultValue]="'left'"
+        (value)="handleTextAlign($event)"></app-control-bar-widget-text-align>
 </div>

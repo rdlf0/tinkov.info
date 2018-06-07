@@ -1,0 +1,11 @@
+<ul>
+    <li [class.selected]="currentValue == 'left'">
+        <span (click)="updateValue('left')">L</span>
+    </li>
+    <li [class.selected]="currentValue == 'center'">
+        <span (click)="updateValue('center')">C</span>
+    </li>
+    <li [class.selected]="currentValue == 'right'">
+        <span (click)="updateValue('right')">R</span>
+    </li>
+</ul>

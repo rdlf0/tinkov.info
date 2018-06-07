@@ -1,0 +1,23 @@
+ul {
+    clear: both;
+    overflow: hidden;
+}
+
+li {
+    display: block;
+    float: left;
+    margin-left: 20px;
+}
+
+li:first-child {
+    margin-left: 0px;
+}
+
+span {
+    color: #cdcdcd;
+    cursor: pointer;
+}
+
+li.selected span {
+    color: #1a1a1a;
+}

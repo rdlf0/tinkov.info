@@ -16,6 +16,7 @@ import { TryComponent } from './components/detail/try/try.component';
 import { FontService } from './services/font.service';
 import { SliderComponent as WidgetSlider } from './components/control-bar/widgets/slider/slider.component';
 import { MatSliderModule } from '@angular/material';
+import { TextAlignComponent as WidgetTextAlign } from './components/control-bar/widgets/text-align/text-align.component';
 
 @NgModule({
     imports: [
@@ -36,7 +37,8 @@ import { MatSliderModule } from '@angular/material';
         InspirationComponent,
         DetailsComponent,
         TryComponent,
-        WidgetSlider
+        WidgetSlider,
+        WidgetTextAlign
     ],
     providers: [
         FontService
