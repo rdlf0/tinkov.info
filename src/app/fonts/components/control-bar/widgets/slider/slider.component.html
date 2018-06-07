@@ -1,10 +1,8 @@
-<div class="widget">
-    <div class="label">{{label}} / {{currentValue}}{{units}}</div>
-    <mat-slider
-        [min]="min"
-        [max]="max"
-        [step]="step"
-        [value]="defaultValue"
-        (input)="updateValue($event)"
-    ></mat-slider>
-</div>
+<div class="label">{{label}} / {{currentValue}}{{units}}</div>
+<mat-slider
+    [min]="min"
+    [max]="max"
+    [step]="step"
+    [value]="defaultValue"
+    (input)="updateValue($event)"
+></mat-slider>
