@@ -14,8 +14,9 @@ import { InspirationComponent } from './components/detail/inspiration/inspiratio
 import { DetailsComponent } from './components/detail/details/details.component';
 import { TryComponent } from './components/detail/try/try.component';
 import { FontService } from './services/font.service';
-import { SliderComponent as WidgetSlider } from './components/control-bar/widgets/slider/slider.component';
 import { MatSliderModule } from '@angular/material';
+import { AbstractWidgetComponent } from './components/control-bar/widgets/widget.component';
+import { SliderComponent as WidgetSlider } from './components/control-bar/widgets/slider/slider.component';
 import { TextAlignComponent as WidgetTextAlign } from './components/control-bar/widgets/text-align/text-align.component';
 import { InverterComponent as WidgetInverter } from './components/control-bar/widgets/inverter/inverter.component';
 import { ResetterComponent as WidgetResetter } from './components/control-bar/widgets/resetter/resetter.component';
@@ -39,6 +40,7 @@ import { ResetterComponent as WidgetResetter } from './components/control-bar/wi
         InspirationComponent,
         DetailsComponent,
         TryComponent,
+        AbstractWidgetComponent,
         WidgetSlider,
         WidgetTextAlign,
         WidgetInverter,
