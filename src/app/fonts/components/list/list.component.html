@@ -1,9 +1,13 @@
 <div class="main-wrapper">
     <h2>Fonts</h2>
     <app-control-bar #controlbar></app-control-bar>
-    <ul>
-        <li *ngFor="let font of fonts">
-            <app-fonts-list-item [font]="font" [controlBar]="controlbar"></app-fonts-list-item>
-        </li>
-    </ul>
+</div>
+<div class="wide-wrapper" [class.inverted]="controlbar.invertColors">
+    <div class="main-wrapper">
+        <ul>
+            <li *ngFor="let font of fonts">
+                <app-fonts-list-item [font]="font" [controlBar]="controlbar"></app-fonts-list-item>
+            </li>
+        </ul>
+    </div>
 </div>

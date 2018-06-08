@@ -1,8 +1,21 @@
+.wide-wrapper {
+    background-color: #ffffff;
+    display: block;
+    clear: both;
+    overflow: hidden;
+    transition: background-color 0.2s ease;
+}
+
+.wide-wrapper.inverted {
+    background-color: #1a1a1a;
+}
+
 ul {
     display: block;
     clear: both;
     overflow: hidden;
     margin-left: -200px;
+    margin-top: 80px;
 }
 
 li {
@@ -11,4 +24,10 @@ li {
     width: 500px;
     margin-bottom: 85px;
     margin-left: 200px;
+    color: #1a1a1a;
+    transition: color 0.2s ease;
+}
+
+.wide-wrapper.inverted li {
+    color: #ffffff;
 }
