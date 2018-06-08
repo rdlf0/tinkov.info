@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { WidgetService } from '../../services/widget.service';
 
 @Component({
     selector: 'app-control-bar',
     templateUrl: './control-bar.component.html',
-    styleUrls: ['./control-bar.component.css']
+    styleUrls: ['./control-bar.component.css'],
+    providers: [WidgetService]
 })
 export class ControlBarComponent {
 

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { WidgetService } from '../../../../services/widget.service';
 
 @Component({
     selector: 'app-control-bar-widget-inverter',
@@ -11,6 +12,12 @@ export class InverterComponent implements OnInit {
     @Output() value = new EventEmitter<boolean>();
 
     currentValue: boolean;
+
+    constructor(private widgetService: WidgetService) {
+        widgetService.resetTrigger$.subscribe(
+            () => this.updateValue(this.defaultValue)
+        );
+    }
 
     ngOnInit() {
         this.updateValue(this.defaultValue);

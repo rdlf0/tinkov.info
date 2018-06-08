@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { WidgetService } from '../../../../services/widget.service';
 
 @Component({
     selector: 'app-control-bar-widget-text-align',
@@ -12,10 +13,14 @@ export class TextAlignComponent implements OnInit {
 
     currentValue: string = this.defaultValue;
 
+    constructor(private widgetService: WidgetService) {
+        widgetService.resetTrigger$.subscribe(
+            () => this.updateValue(this.defaultValue)
+        );
+    }
+
     ngOnInit(): void {
-        // this.updateValue(this.defaultValue);
-        this.currentValue = this.defaultValue;
-        this.value.emit(this.currentValue);
+        this.updateValue(this.defaultValue);
     }
 
     updateValue(value: string): void {

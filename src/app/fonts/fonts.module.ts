@@ -18,6 +18,7 @@ import { SliderComponent as WidgetSlider } from './components/control-bar/widget
 import { MatSliderModule } from '@angular/material';
 import { TextAlignComponent as WidgetTextAlign } from './components/control-bar/widgets/text-align/text-align.component';
 import { InverterComponent as WidgetInverter } from './components/control-bar/widgets/inverter/inverter.component';
+import { ResetterComponent as WidgetResetter } from './components/control-bar/widgets/resetter/resetter.component';
 
 @NgModule({
     imports: [
@@ -40,7 +41,8 @@ import { InverterComponent as WidgetInverter } from './components/control-bar/wi
         TryComponent,
         WidgetSlider,
         WidgetTextAlign,
-        WidgetInverter
+        WidgetInverter,
+        WidgetResetter
     ],
     providers: [
         FontService

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { MatSliderChange } from '@angular/material';
+import { WidgetService } from '../../../../services/widget.service';
 
 @Component({
     selector: 'app-control-bar-widget-slider',
@@ -20,13 +20,18 @@ export class SliderComponent implements OnInit {
 
     currentValue: number;
 
-    ngOnInit(): void {
-        this.currentValue = this.defaultValue;
-        this.value.emit(this.defaultValue);
+    constructor(private widgetService: WidgetService) {
+        widgetService.resetTrigger$.subscribe(
+            () => this.updateValue(this.defaultValue)
+        );
     }
 
-    updateValue(event: MatSliderChange): void {
-        this.currentValue = event.value;
+    ngOnInit(): void {
+        this.updateValue(this.defaultValue);
+    }
+
+    updateValue(value: number): void {
+        this.currentValue = value;
         this.value.emit(this.currentValue);
     }
 }
