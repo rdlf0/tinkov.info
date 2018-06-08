@@ -16,6 +16,7 @@ li:first-child {
 span {
     color: #cdcdcd;
     cursor: pointer;
+    font-family: 'Tico', sans-serif;
 }
 
 li.selected span {

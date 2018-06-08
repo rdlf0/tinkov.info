@@ -9,6 +9,15 @@
     url('assets/fonts/OneSans/OneSans-Regular.otf') format('opentype');
 }
 
+@font-face {
+    font-family: "Tico";
+    src: url('assets/fonts/Tico/tico-Regular.eot');
+    src: url('assets/fonts/Tico/tico-Regular.woff') format('woff'),
+    url('assets/fonts/Tico/tico-Regular.woff2') format('woff2'),
+    url('assets/fonts/Tico/tico-Regular.ttf') format('truetype'),
+    url('assets/fonts/Tico/tico-Regular.otf') format('opentype');
+}
+
 html {
     margin: 0;
     padding: 0;
