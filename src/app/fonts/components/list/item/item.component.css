@@ -32,6 +32,11 @@ a {
     height: 45px;
     font-size: 24px;
     text-align: center;
+    border: 3px solid #1a1a1a;
+    border-radius: 50%;
+    line-height: 43px;
+    box-shadow: #1a1a1a 1px 2px 0px;
+    margin-bottom: 2px;
 }
 
 .info {
@@ -40,6 +45,7 @@ a {
     margin-left: 12px;
     overflow: hidden;
     font-size: 14px;
+    margin-top: 8px;
 }
 
 .info .font-name {
