@@ -37,7 +37,7 @@ a {
     line-height: 43px;
     box-shadow: #1a1a1a 1px 2px 0px;
     margin-bottom: 2px;
-    transition: all 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 :host-context(.wide-wrapper.inverted) .arrow {
