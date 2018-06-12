@@ -1,28 +1,32 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { WidgetService } from '../../../services/widget.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { ControlBarService } from '../../../services/control-bar.service';
+import { WidgetService } from '../../../services/control-bar/widget.service';
 
 @Component({
     template: ''
 })
 export class AbstractWidgetComponent<T> implements OnInit {
 
+    @Input() widgetName: string;
     @Input() defaultValue: T;
-    @Output() value = new EventEmitter<T>();
     currentValue: T;
 
-    constructor(private widgetService: WidgetService) {
-        widgetService.resetTrigger$.subscribe(
+    constructor(
+        private widgetService: WidgetService,
+        private controlBarService: ControlBarService<T>
+    ) { }
+
+    ngOnInit(): void {
+        this.updateValue(this.defaultValue);
+
+        this.widgetService.resetTrigger.subscribe(
             () => this.updateValue(this.defaultValue)
         );
     }
 
-    ngOnInit(): void {
-        this.updateValue(this.defaultValue);
-    }
-
     updateValue(value: T): void {
         this.currentValue = value;
-        this.value.emit(this.currentValue);
+        this.controlBarService.broadcastUpdate(this.widgetName, value);
     }
 
 }

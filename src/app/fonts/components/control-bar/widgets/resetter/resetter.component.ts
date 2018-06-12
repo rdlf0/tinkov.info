@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { WidgetService } from '../../../../services/widget.service';
+import { WidgetService } from '../../../../services/control-bar/widget.service';
 
 @Component({
     selector: 'app-control-bar-widget-resetter',

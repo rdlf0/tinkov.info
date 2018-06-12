@@ -7,13 +7,13 @@
     height: 100px;
 }
 
-.widget {
+#control_bar>* {
     display: block;
     float: left;
     margin-left: 40px;
     margin-top: 40px;
 }
 
-.widget:first-child {
+#control_bar>*:first-child {
     margin-left: 0px;
 }
