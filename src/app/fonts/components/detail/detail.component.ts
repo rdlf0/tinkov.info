@@ -4,10 +4,12 @@ import { FontService } from '../../services/font.service';
 import { Font } from '../../models/font';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { ControlBarService } from '../../services/control-bar.service';
 
 @Component({
     templateUrl: './detail.component.html',
-    styleUrls: ['./detail.component.css']
+    styleUrls: ['./detail.component.css'],
+    providers: [ControlBarService]
 })
 export class DetailComponent implements OnInit {
 
