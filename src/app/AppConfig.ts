@@ -1,7 +1,8 @@
 export class AppConfig {
     title: string;
     api: {
-        endpoint: string
+        endpoint: string,
+        fontsPath: string
     };
     controlBar: {
         widgets: Widget[]

@@ -6,7 +6,8 @@ export let APP_CONFIG = new InjectionToken<AppConfig>('app.config');
 export const APP_DI_CONFIG: AppConfig = {
     title: 'Tinkov',
     api: {
-        endpoint: 'api/fonts'
+        endpoint: 'api',
+        fontsPath: 'fonts'
     },
     controlBar: {
         widgets: [
