@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FontsModule } from './fonts/fonts.module';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { CommonModule } from '@angular/common';
+import { APP_CONFIG, APP_DI_CONFIG } from './app.config';
 
 @NgModule({
     imports: [
@@ -20,7 +21,7 @@ import { CommonModule } from '@angular/common';
         BreadcrumbComponent,
         HomepageComponent
     ],
-    providers: [],
+    providers: [{ provide: APP_CONFIG, useValue: APP_DI_CONFIG }],
     bootstrap: [AppComponent]
 })
 export class AppModule {
