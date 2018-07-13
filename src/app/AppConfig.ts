@@ -1,3 +1,5 @@
+import { Widget } from './fonts/models/widget';
+
 export class AppConfig {
     title: string;
     api: {
@@ -12,10 +14,4 @@ export class AppConfig {
             widgets: string[]
         }
     };
-}
-
-class Widget {
-    name: string;
-    type: string;
-    data: { key: string, value: any }[];
 }
