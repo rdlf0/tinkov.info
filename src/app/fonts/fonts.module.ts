@@ -20,6 +20,7 @@ import { SliderComponent as WidgetSlider } from './components/control-bar/widget
 import { TextAlignComponent as WidgetTextAlign } from './components/control-bar/widgets/text-align/text-align.component';
 import { InverterComponent as WidgetInverter } from './components/control-bar/widgets/inverter/inverter.component';
 import { ResetterComponent as WidgetResetter } from './components/control-bar/widgets/resetter/resetter.component';
+import { WidgetDirective } from './components/control-bar/widgets/widget.directive';
 
 @NgModule({
     imports: [
@@ -41,6 +42,7 @@ import { ResetterComponent as WidgetResetter } from './components/control-bar/wi
         DetailsComponent,
         TryComponent,
         AbstractWidgetComponent,
+        WidgetDirective,
         WidgetSlider,
         WidgetTextAlign,
         WidgetInverter,
@@ -48,6 +50,11 @@ import { ResetterComponent as WidgetResetter } from './components/control-bar/wi
     ],
     providers: [
         FontService
+    ],
+    entryComponents: [
+        WidgetSlider,
+        WidgetTextAlign,
+        WidgetInverter
     ]
 })
 export class FontsModule {

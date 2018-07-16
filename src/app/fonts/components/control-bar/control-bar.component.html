@@ -1,38 +1,5 @@
 <div id="control_bar">
-    <app-control-bar-widget-slider
-        [widgetName]="'fontSize'"
-        [label]="'S'"
-        [units]="'px'"
-        [defaultValue]="96"
-        [min]="10"
-        [max]="120"
-        [step]="1"></app-control-bar-widget-slider>
+    <ng-template appWidgetsHost></ng-template>
 
-    <app-control-bar-widget-slider
-        [widgetName]="'lineHeight'"
-        [label]="'LH'"
-        [units]="'px'"
-        [defaultValue]="100"
-        [min]="10"
-        [max]="140"
-        [step]="1"></app-control-bar-widget-slider>
-
-    <app-control-bar-widget-slider
-        [widgetName]="'letterSpacing'"
-        [label]="'LS'"
-        [units]="'px'"
-        [defaultValue]="0"
-        [min]="0"
-        [max]="20"
-        [step]="1"></app-control-bar-widget-slider>
-
-    <app-control-bar-widget-text-align
-        [widgetName]="'textAlign'"
-        [defaultValue]="'left'"></app-control-bar-widget-text-align>
-
-    <app-control-bar-widget-inverter
-        [widgetName]="'inverter'"
-        [defaultValue]="false"></app-control-bar-widget-inverter>
-
-    <app-control-bar-widget-resetter></app-control-bar-widget-resetter>
+    <app-control-bar-widget-resetter *ngIf="resetter"></app-control-bar-widget-resetter>
 </div>

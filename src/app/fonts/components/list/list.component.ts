@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FontService } from '../../services/font.service';
 import { Font } from '../../models/font';
 import { ControlBarService } from '../../services/control-bar.service';
+import { APP_CONFIG } from '../../../app.config';
+import { AppConfig } from '../../../AppConfig';
 
 @Component({
     templateUrl: './list.component.html',
@@ -11,13 +13,18 @@ import { ControlBarService } from '../../services/control-bar.service';
 export class ListComponent implements OnInit {
 
     fonts: Font[];
-
-    private backgroundInverted = false;
+    controlBarWidgets: string[];
+    controlBarResetter: boolean;
+    backgroundInverted = false;
 
     constructor(
         private fontService: FontService,
-        private controlBarService: ControlBarService<boolean>
-    ) { }
+        private controlBarService: ControlBarService<boolean>,
+        @Inject(APP_CONFIG) private config: AppConfig
+    ) {
+        this.controlBarWidgets = config.list.controlBar.widgets;
+        this.controlBarResetter = config.list.controlBar.resetter;
+    }
 
     ngOnInit() {
         this.getFonts();
