@@ -11,7 +11,8 @@ export class AppConfig {
     };
     list: {
         controlBar: {
-            widgets: string[]
+            widgets: string[],
+            resetter: boolean
         }
     };
 }
