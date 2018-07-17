@@ -17,112 +17,50 @@ export const APP_DI_CONFIG: AppConfig = {
             {
                 name: 'fontSize',
                 type: SliderComponent,
-                data: [
-                    {
-                        key: 'label',
-                        value: 'S'
-                    },
-                    {
-                        key: 'units',
-                        value: 'px',
-                    },
-                    {
-                        key: 'defaultValue',
-                        value: 96,
-                    },
-                    {
-                        key: 'min',
-                        value: 10,
-                    },
-                    {
-                        key: 'max',
-                        value: 120,
-                    },
-                    {
-                        key: 'step',
-                        value: 1,
-                    }
-                ]
+                defaultValue: 96,
+                data: {
+                    label: 'S',
+                    units: 'px',
+                    min: 10,
+                    max: 120,
+                    step: 1
+                }
             },
             {
                 name: 'lineHeight',
                 type: SliderComponent,
-                data: [
-                    {
-                        key: 'label',
-                        value: 'LH'
-                    },
-                    {
-                        key: 'units',
-                        value: 'px',
-                    },
-                    {
-                        key: 'defaultValue',
-                        value: 100,
-                    },
-                    {
-                        key: 'min',
-                        value: 10,
-                    },
-                    {
-                        key: 'max',
-                        value: 140,
-                    },
-                    {
-                        key: 'step',
-                        value: 1,
-                    }
-                ]
+                defaultValue: 100,
+                data: {
+                    label: 'LH',
+                    units: 'px',
+                    min: 10,
+                    max: 140,
+                    step: 1
+                }
             },
             {
                 name: 'letterSpacing',
                 type: SliderComponent,
-                data: [
-                    {
-                        key: 'label',
-                        value: 'LS'
-                    },
-                    {
-                        key: 'units',
-                        value: 'px',
-                    },
-                    {
-                        key: 'defaultValue',
-                        value: 0,
-                    },
-                    {
-                        key: 'min',
-                        value: 0,
-                    },
-                    {
-                        key: 'max',
-                        value: 20,
-                    },
-                    {
-                        key: 'step',
-                        value: 1,
-                    }
-                ]
+                defaultValue: 0,
+                data: {
+                    label: 'LS',
+                    units: 'px',
+                    min: 0,
+                    max: 20,
+                    step: 1
+                }
             },
             {
                 name: 'textAlign',
                 type: TextAlignComponent,
-                data: [
-                    {
-                        key: 'defaultValue',
-                        value: 'left',
-                    }
-                ]
+                defaultValue: 'left',
+                data: {}
             },
             {
                 name: 'inverter',
                 type: InverterComponent,
-                data: [
-                    {
-                        key: 'defaultValue',
-                        value: false,
-                    }
-                ]
+                defaultValue: false,
+                data: {}
             }
         ]
     },

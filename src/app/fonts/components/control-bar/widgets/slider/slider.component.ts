@@ -7,10 +7,11 @@ import { AbstractWidgetComponent } from '../widget.component';
     styleUrls: ['./slider.component.css']
 })
 export class SliderComponent extends AbstractWidgetComponent<number> {
-
-    @Input() label: string;
-    @Input() units: string;
-    @Input() min: number;
-    @Input() max: number;
-    @Input() step: number;
+    @Input() data: {
+        label: string,
+        units: string,
+        min: number,
+        max: number,
+        step: number
+    };
 }

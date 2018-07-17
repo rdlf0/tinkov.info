@@ -1,4 +1,4 @@
-import { Component, ComponentFactoryResolver, Input, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ComponentFactoryResolver, Input, OnInit, ViewChild } from '@angular/core';
 import { WidgetService } from '../../services/control-bar/widget.service';
 import { WidgetFactoryService } from '../../services/control-bar/widget-factory.service';
 import { Widget } from '../../models/widget';
@@ -42,10 +42,8 @@ export class ControlBarComponent implements OnInit {
             const componentRef = this.widgetsHost.viewContainerRef.createComponent(componentFactory);
 
             (<AbstractWidgetComponent<any>>componentRef.instance).widgetName = widget.name;
-
-            for (const item of widget.data) {
-                componentRef.instance[item.key] = item.value;
-            }
+            (<AbstractWidgetComponent<any>>componentRef.instance).defaultValue = widget.defaultValue;
+            (<AbstractWidgetComponent<any>>componentRef.instance).data = widget.data;
         }
     }
 }

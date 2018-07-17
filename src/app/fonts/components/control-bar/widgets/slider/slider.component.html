@@ -1,8 +1,8 @@
-<div class="label slider-label">{{label}} / {{currentValue}}{{units}}</div>
+<div class="label slider-label">{{data.label}} / {{currentValue}}{{data.units}}</div>
 <mat-slider
-    [min]="min"
-    [max]="max"
-    [step]="step"
+    [min]="data.min"
+    [max]="data.max"
+    [step]="data.step"
     [value]="currentValue"
     (input)="updateValue($event.value)"
 ></mat-slider>

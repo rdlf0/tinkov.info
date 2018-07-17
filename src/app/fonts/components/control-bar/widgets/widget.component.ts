@@ -9,6 +9,7 @@ export class AbstractWidgetComponent<T> implements OnInit {
 
     @Input() widgetName: string;
     @Input() defaultValue: T;
+    @Input() data: any;
     currentValue: T;
 
     constructor(
