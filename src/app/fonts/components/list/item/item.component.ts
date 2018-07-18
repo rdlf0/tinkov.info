@@ -26,13 +26,9 @@ export class ItemComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this.controlBarService.updateValue.subscribe(
-            (feed: { widget, value }) => {
-                if (this.controlBarWidgets.hasOwnProperty(feed.widget)) {
-                    this.controlBarWidgets[feed.widget] = feed.value;
-                }
-            }
-        );
+        this.controlBarService.updateValue
+            .filter(feed => this.controlBarWidgets.hasOwnProperty(feed.widget))
+            .subscribe(feed => this.controlBarWidgets[feed.widget] = feed.value);
     }
 
     @HostListener('document:click', ['$event.target'])

@@ -29,13 +29,9 @@ export class ListComponent implements OnInit {
     ngOnInit() {
         this.getFonts();
 
-        this.controlBarService.updateValue.subscribe(
-            (feed: { widget, value }) => {
-                if (feed.widget === 'inverter') {
-                    this.backgroundInverted = feed.value;
-                }
-            }
-        );
+        this.controlBarService.updateValue
+            .filter(feed => feed.widget === 'inverter')
+            .subscribe(feed => this.backgroundInverted = feed.value);
     }
 
     getFonts(): void {
