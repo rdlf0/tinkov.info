@@ -3,6 +3,7 @@ import { InjectionToken } from '@angular/core';
 import { SliderComponent } from './fonts/components/control-bar/widgets/slider/slider.component';
 import { TextAlignComponent } from './fonts/components/control-bar/widgets/text-align/text-align.component';
 import { InverterComponent } from './fonts/components/control-bar/widgets/inverter/inverter.component';
+import { widgets } from '../../DATA/widgets';
 
 export let APP_CONFIG = new InjectionToken<AppConfig>('app.config');
 
@@ -23,50 +24,32 @@ export const APP_DI_CONFIG: AppConfig = {
             {
                 name: WIDGET_FONT_SIZE,
                 type: SliderComponent,
-                defaultValue: 96,
-                data: {
-                    label: 'S',
-                    units: 'px',
-                    min: 10,
-                    max: 120,
-                    step: 1
-                }
+                defaultValue: widgets.fontSize.defaultValue,
+                data: widgets.fontSize.params
             },
             {
                 name: WIDGET_LINE_HEIGHT,
                 type: SliderComponent,
-                defaultValue: 100,
-                data: {
-                    label: 'LH',
-                    units: 'px',
-                    min: 10,
-                    max: 140,
-                    step: 1
-                }
+                defaultValue: widgets.lineHeight.defaultValue,
+                data: widgets.lineHeight.params
             },
             {
                 name: WIDGET_LETTER_SPACING,
                 type: SliderComponent,
-                defaultValue: 0,
-                data: {
-                    label: 'LS',
-                    units: 'px',
-                    min: 0,
-                    max: 20,
-                    step: 1
-                }
+                defaultValue: widgets.letterSpacing.defaultValue,
+                data: widgets.letterSpacing.params
             },
             {
                 name: WIDGET_TEXT_ALIGN,
                 type: TextAlignComponent,
-                defaultValue: 'left',
-                data: {}
+                defaultValue: widgets.textAlign.defaultValue,
+                data: widgets.textAlign.params
             },
             {
                 name: WIDGET_INVERTER,
                 type: InverterComponent,
-                defaultValue: false,
-                data: {}
+                defaultValue: widgets.inverter.defaultValue,
+                data: widgets.inverter.params
             }
         ]
     },
