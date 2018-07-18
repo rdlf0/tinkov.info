@@ -2,7 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FontService } from '../../services/font.service';
 import { Font } from '../../models/font';
 import { ControlBarService } from '../../services/control-bar.service';
-import { APP_CONFIG } from '../../../app.config';
+import { APP_CONFIG, WIDGET_INVERTER } from '../../../app.config';
 import { AppConfig } from '../../../AppConfig';
 
 @Component({
@@ -30,7 +30,7 @@ export class ListComponent implements OnInit {
         this.getFonts();
 
         this.controlBarService.updateValue
-            .filter(feed => feed.widget === 'inverter')
+            .filter(feed => feed.widget === WIDGET_INVERTER)
             .subscribe(feed => this.backgroundInverted = feed.value);
     }
 
