@@ -3,7 +3,7 @@ import { InjectionToken } from '@angular/core';
 import { SliderComponent } from './fonts/components/control-bar/widgets/slider/slider.component';
 import { TextAlignComponent } from './fonts/components/control-bar/widgets/text-align/text-align.component';
 import { InverterComponent } from './fonts/components/control-bar/widgets/inverter/inverter.component';
-import { widgets } from '../../DATA/widgets';
+import { websiteDefaultTitle, widgets } from '../../DATA/config';
 
 export let APP_CONFIG = new InjectionToken<AppConfig>('app.config');
 
@@ -14,7 +14,7 @@ export const WIDGET_TEXT_ALIGN = 'textAlign';
 export const WIDGET_INVERTER = 'inverter';
 
 export const APP_DI_CONFIG: AppConfig = {
-    title: 'Tinkov',
+    title: websiteDefaultTitle,
     api: {
         endpoint: 'api',
         fontsPath: 'fonts'
