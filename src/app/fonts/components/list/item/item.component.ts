@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 import { Font } from '../../../models/font';
-import { ControlBarService } from '../../../services/control-bar.service';
+import { WidgetUpdateService } from '../../../services/control-bar/widget-update.service';
 
 @Component({
     selector: 'app-fonts-list-item',
@@ -22,11 +22,11 @@ export class ItemComponent implements OnInit {
 
     constructor(
         private elementRef: ElementRef,
-        private controlBarService: ControlBarService<any>
+        private widgetUpdateService: WidgetUpdateService<any>
     ) {}
 
     ngOnInit(): void {
-        this.controlBarService.updateValue
+        this.widgetUpdateService.updateValue
             .filter(feed => this.controlBarWidgets.hasOwnProperty(feed.widget))
             .subscribe(feed => this.controlBarWidgets[feed.widget] = feed.value);
     }

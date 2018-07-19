@@ -1,14 +1,14 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FontService } from '../../services/font.service';
 import { Font } from '../../models/font';
-import { ControlBarService } from '../../services/control-bar.service';
+import { WidgetUpdateService } from '../../services/control-bar/widget-update.service';
 import { APP_CONFIG, WIDGET_INVERTER } from '../../../app.config';
 import { AppConfig } from '../../../AppConfig';
 
 @Component({
     templateUrl: './list.component.html',
     styleUrls: ['./list.component.css', '../../../../../DATA/all-fonts.css'],
-    providers: [ControlBarService]
+    providers: [WidgetUpdateService]
 })
 export class ListComponent implements OnInit {
 
@@ -19,7 +19,7 @@ export class ListComponent implements OnInit {
 
     constructor(
         private fontService: FontService,
-        private controlBarService: ControlBarService<boolean>,
+        private widgetUpdateService: WidgetUpdateService<boolean>,
         @Inject(APP_CONFIG) private config: AppConfig
     ) {
         this.controlBarWidgets = config.list.controlBar.widgets;
@@ -29,7 +29,7 @@ export class ListComponent implements OnInit {
     ngOnInit() {
         this.getFonts();
 
-        this.controlBarService.updateValue
+        this.widgetUpdateService.updateValue
             .filter(feed => feed.widget === WIDGET_INVERTER)
             .subscribe(feed => this.backgroundInverted = feed.value);
     }

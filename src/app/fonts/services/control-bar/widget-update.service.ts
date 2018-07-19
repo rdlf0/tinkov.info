@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 
 @Injectable()
-export class ControlBarService<T> {
+export class WidgetUpdateService<T> {
 
     updateValue = new ReplaySubject<{ widget: string, value: T }>();
 

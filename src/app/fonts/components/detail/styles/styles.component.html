@@ -1,5 +1,5 @@
-<app-fonts-control-bar #controlbar></app-fonts-control-bar>
+<app-fonts-control-bar [widgets]="['fontSize', 'textAlign']" [resetter]="true"></app-fonts-control-bar>
 <div>
-    <p [style.font-size.px]="controlbar.fontSize">This is all the info we have for this font:</p>
+    <p>This is all the info we have for this font:</p>
     <pre>{{font|json}}</pre>
 </div>

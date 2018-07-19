@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ControlBarService } from '../../../services/control-bar.service';
+import { WidgetUpdateService } from '../../../services/control-bar/widget-update.service';
 import { WidgetResetService } from '../../../services/control-bar/widget-reset.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class AbstractWidgetComponent<T> implements OnInit {
 
     constructor(
         private widgetResetService: WidgetResetService,
-        private controlBarService: ControlBarService<T>
+        private widgetUpdateService: WidgetUpdateService<T>
     ) { }
 
     ngOnInit(): void {
@@ -27,7 +27,7 @@ export class AbstractWidgetComponent<T> implements OnInit {
 
     updateValue(value: T): void {
         this.currentValue = value;
-        this.controlBarService.broadcastUpdate(this.widgetName, value);
+        this.widgetUpdateService.broadcastUpdate(this.widgetName, value);
     }
 
 }
