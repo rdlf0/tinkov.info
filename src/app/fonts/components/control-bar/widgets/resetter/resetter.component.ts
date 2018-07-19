@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { WidgetService } from '../../../../services/control-bar/widget.service';
+import { WidgetResetService } from '../../../../services/control-bar/widget-reset.service';
 
 @Component({
     selector: 'app-control-bar-widget-resetter',
@@ -8,9 +8,9 @@ import { WidgetService } from '../../../../services/control-bar/widget.service';
 })
 export class ResetterComponent {
 
-    constructor(private widgetService: WidgetService) {}
+    constructor(private widgetResetService: WidgetResetService) {}
 
     reset() {
-        this.widgetService.triggerReset();
+        this.widgetResetService.triggerReset();
     }
 }

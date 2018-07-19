@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ControlBarService } from '../../../services/control-bar.service';
-import { WidgetService } from '../../../services/control-bar/widget.service';
+import { WidgetResetService } from '../../../services/control-bar/widget-reset.service';
 
 @Component({
     template: ''
@@ -13,14 +13,14 @@ export class AbstractWidgetComponent<T> implements OnInit {
     currentValue: T;
 
     constructor(
-        private widgetService: WidgetService,
+        private widgetResetService: WidgetResetService,
         private controlBarService: ControlBarService<T>
     ) { }
 
     ngOnInit(): void {
         this.updateValue(this.defaultValue);
 
-        this.widgetService.resetTrigger.subscribe(
+        this.widgetResetService.resetTrigger.subscribe(
             () => this.updateValue(this.defaultValue)
         );
     }

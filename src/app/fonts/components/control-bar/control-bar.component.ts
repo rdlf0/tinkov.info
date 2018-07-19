@@ -1,5 +1,5 @@
 import { Component, ComponentFactoryResolver, Input, OnInit, ViewChild } from '@angular/core';
-import { WidgetService } from '../../services/control-bar/widget.service';
+import { WidgetResetService } from '../../services/control-bar/widget-reset.service';
 import { WidgetFactoryService } from '../../services/control-bar/widget-factory.service';
 import { Widget } from '../../models/widget';
 import { WidgetDirective } from './widgets/widget.directive';
@@ -9,7 +9,7 @@ import { AbstractWidgetComponent } from './widgets/widget.component';
     selector: 'app-fonts-control-bar',
     templateUrl: './control-bar.component.html',
     styleUrls: ['./control-bar.component.css'],
-    providers: [WidgetService, WidgetFactoryService]
+    providers: [WidgetResetService, WidgetFactoryService]
 })
 export class ControlBarComponent implements OnInit {
 
