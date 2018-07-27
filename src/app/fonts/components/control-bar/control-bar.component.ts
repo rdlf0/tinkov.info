@@ -26,14 +26,17 @@ export class ControlBarComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
+        this.convertWidgetsToObjects();
+        this.loadWidgets();
+    }
+
+    private convertWidgetsToObjects() {
         for (const widget of this.widgets) {
             const widgetObject = this.widgetFactoryService.getWidget(widget);
             if (widgetObject) {
                 this.widgetObjects.push(widgetObject);
             }
         }
-
-        this.loadWidgets();
     }
 
     loadWidgets(): void {
