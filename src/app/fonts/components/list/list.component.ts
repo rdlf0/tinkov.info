@@ -29,7 +29,7 @@ export class ListComponent implements OnInit {
     ngOnInit() {
         this.getFonts();
 
-        this.widgetUpdateService.updateValue
+        this.widgetUpdateService.valueUpdated$
             .filter(feed => feed.widget === WIDGET_INVERTER)
             .subscribe(feed => this.backgroundInverted = feed.value);
     }

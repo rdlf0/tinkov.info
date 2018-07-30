@@ -26,7 +26,7 @@ export class ItemComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this.widgetUpdateService.updateValue
+        this.widgetUpdateService.valueUpdated$
             .filter(feed => this.controlBarWidgets.hasOwnProperty(feed.widget))
             .subscribe(feed => this.controlBarWidgets[feed.widget] = feed.value);
     }
