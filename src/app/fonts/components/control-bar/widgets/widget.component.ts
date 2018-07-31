@@ -20,7 +20,7 @@ export class AbstractWidgetComponent<T> implements OnInit {
     ngOnInit(): void {
         this.updateValue(this.defaultValue);
 
-        this.widgetResetService.resetTrigger.subscribe(
+        this.widgetResetService.resetTriggered$.subscribe(
             () => this.updateValue(this.defaultValue)
         );
     }

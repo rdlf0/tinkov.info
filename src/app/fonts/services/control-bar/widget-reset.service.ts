@@ -4,9 +4,11 @@ import { Subject } from 'rxjs';
 @Injectable()
 export class WidgetResetService {
 
-    resetTrigger = new Subject();
+    private trigger = new Subject();
+
+    resetTriggered$ = this.trigger.asObservable();
 
     triggerReset(): void {
-        this.resetTrigger.next();
+        this.trigger.next();
     }
 }
