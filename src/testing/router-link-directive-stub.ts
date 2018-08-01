@@ -1,8 +1,6 @@
 import { Directive, Input } from '@angular/core';
 
-/* tslint:disable:directive-class-suffix */
-/* tslint:disable:directive-selector */
-/* tslint:disable:use-host-property-decorator */
+// tslint:disable:directive-class-suffix directive-selector use-host-property-decorator
 @Directive({
     selector: '[routerLink]',
     host: { '(click)': 'onClick()' }
