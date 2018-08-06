@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ActivatedRouteStub } from '../../../../testing/activated-route-stub';
 import { Component, Input } from '@angular/core';
 import { Font } from '../../models/font';
+import { of } from 'rxjs';
 
 describe('DetailComponent', () => {
     let component: DetailComponent;
@@ -14,6 +15,7 @@ describe('DetailComponent', () => {
 
     beforeEach(async(() => {
         const fontServiceSpy = jasmine.createSpyObj('FontService', ['getFontByProperty']);
+        fontServiceSpy.getFontByProperty.and.returnValue(of());
 
         activatedRoute.setParamMap({ slug: 'test-font' });
 

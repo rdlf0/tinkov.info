@@ -27,15 +27,18 @@ export class BreadcrumbComponent implements OnInit {
         // subscribe to the NavigationEnd event
         this.router.events
             .filter(event => event instanceof NavigationEnd)
-            .map(() => this.activatedRoute)
-            .subscribe(route => {
-                const root: ActivatedRoute = route.root;
+            .subscribe(() => {
+                const root: ActivatedRoute = this.activatedRoute.root;
                 this.breadcrumbs = this.getBreadcrumbs(root);
             });
     }
 
     private getBreadcrumbs(route: ActivatedRoute, url: string = '', breadcrumbs: Breadcrumb[] = []): Breadcrumb[] {
         const ROUTE_DATA_BREADCRUMB = 'breadcrumb';
+
+        if (route === undefined) {
+            return breadcrumbs;
+        }
 
         // get the child routes
         const children: ActivatedRoute[] = route.children;
