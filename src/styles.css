@@ -55,3 +55,9 @@ ul {
     margin: 0 auto;
     width: 1200px;
 }
+
+@media screen and (max-width: 1217px) {
+    .main-wrapper {
+        width: 100%;
+    }
+}

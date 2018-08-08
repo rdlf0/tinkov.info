@@ -1,19 +1,32 @@
 #control_bar {
-    display: block;
-    clear: both;
-    overflow: hidden;
+    display: flex;
     background-color: #fafafa;
     padding: 0px 40px;
-    height: 100px;
+    min-height: 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-:host ::ng-deep #control_bar>* {
-    display: block;
-    float: left;
-    margin-left: 40px;
-    margin-top: 40px;
+@media screen and (max-width: 1217px) {
+    #control_bar {
+        width: calc(100% - 80px);
+    }
 }
 
-:host ::ng-deep #control_bar>*:first-child {
-    margin-left: 0px;
+:host ::ng-deep app-control-bar-widget-slider {
+    margin-top: 33px;
+    width: 100px;
+}
+
+:host ::ng-deep app-control-bar-widget-text-align {
+    width: 110px;
+}
+
+:host ::ng-deep app-control-bar-widget-inverter {
+    width: 40px;
+}
+
+:host ::ng-deep app-control-bar-widget-resetter {
+    width: 40px;
 }

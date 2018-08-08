@@ -18,6 +18,12 @@
     outline: none;
 }
 
+@media screen and (max-width: 1217px) {
+    .font-preview {
+        min-height: inherit;
+    }
+}
+
 a {
     display: block;
     clear: both;
