@@ -11,23 +11,26 @@
 }
 
 ul {
-    display: block;
-    clear: both;
-    overflow: hidden;
-    margin-left: -200px;
+    display: flex;
     margin-top: 80px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 li {
-    display: block;
-    float: left;
     width: 500px;
     margin-bottom: 85px;
-    margin-left: 200px;
     color: #1a1a1a;
     transition: color 0.2s ease;
+    word-wrap: break-word;
 }
 
 .wide-wrapper.inverted li {
     color: #ffffff;
+}
+
+@media screen and (max-width: 1217px) {
+    li {
+        width: 100%;
+    }
 }
