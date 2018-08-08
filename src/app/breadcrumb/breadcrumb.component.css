@@ -1,13 +1,9 @@
 ul {
-    display: block;
-    overflow: hidden;
+    display: flex;
     margin-left: 15px;
-    float: left;
 }
 
 li {
-    display: block;
-    float: left;
     font-size: 12px;
     margin-left: 8px;
     margin-top: 5px;
