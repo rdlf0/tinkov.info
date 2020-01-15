@@ -49,8 +49,5 @@
         "ts-node": "^6.2.0",
         "tslint": "^5.11.0",
         "typescript": "~2.7.2"
-    },
-    "resolutions": {
-        "tree-kill": "1.2.2"
     }
 }
