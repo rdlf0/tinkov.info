@@ -1,8 +1,10 @@
+
+import {filter} from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, PRIMARY_OUTLET, Router } from '@angular/router';
 import { Breadcrumb } from '../breadcrumb';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/map';
+
+
 import { FontService } from '../fonts/services/font.service';
 import { Font } from '../fonts/models/font';
 
@@ -25,8 +27,8 @@ export class BreadcrumbComponent implements OnInit {
 
     ngOnInit() {
         // subscribe to the NavigationEnd event
-        this.router.events
-            .filter(event => event instanceof NavigationEnd)
+        this.router.events.pipe(
+            filter(event => event instanceof NavigationEnd))
             .subscribe(() => {
                 const root: ActivatedRoute = this.activatedRoute.root;
                 this.breadcrumbs = this.getBreadcrumbs(root);

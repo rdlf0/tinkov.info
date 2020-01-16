@@ -1,3 +1,5 @@
+
+import {filter} from 'rxjs/operators';
 import { Component, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 import { Font } from '../../../models/font';
 import { WidgetUpdateService } from '../../../services/control-bar/widget-update.service';
@@ -26,8 +28,8 @@ export class ItemComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this.widgetUpdateService.valueUpdated$
-            .filter(feed => this.controlBarWidgets.hasOwnProperty(feed.widget))
+        this.widgetUpdateService.valueUpdated$.pipe(
+            filter(feed => this.controlBarWidgets.hasOwnProperty(feed.widget)))
             .subscribe(feed => this.controlBarWidgets[feed.widget] = feed.value);
     }
 

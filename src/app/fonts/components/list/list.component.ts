@@ -1,3 +1,5 @@
+
+import {filter} from 'rxjs/operators';
 import { Component, Inject, OnInit } from '@angular/core';
 import { FontService } from '../../services/font.service';
 import { Font } from '../../models/font';
@@ -29,8 +31,8 @@ export class ListComponent implements OnInit {
     ngOnInit() {
         this.getFonts();
 
-        this.widgetUpdateService.valueUpdated$
-            .filter(feed => feed.widget === WIDGET_INVERTER)
+        this.widgetUpdateService.valueUpdated$.pipe(
+            filter(feed => feed.widget === WIDGET_INVERTER))
             .subscribe(feed => this.backgroundInverted = feed.value);
     }
 

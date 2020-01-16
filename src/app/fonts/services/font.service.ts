@@ -1,3 +1,5 @@
+
+import { map } from 'rxjs/operators';
 import { Inject, Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Font } from '../models/font';
@@ -30,6 +32,6 @@ export class FontService implements OnInit {
 
     getFontByProperty(property: string, value: string): Observable<Font> {
         const url = `${this.fontsApiUrl}/?${property}=${value}`;
-        return this.http.get<Font>(url).map(fonts => fonts[0]);
+        return this.http.get<Font>(url).pipe(map(fonts => fonts[0]));
     }
 }
