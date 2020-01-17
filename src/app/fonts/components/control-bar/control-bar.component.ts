@@ -16,7 +16,7 @@ export class ControlBarComponent implements OnInit {
     @Input() widgets: string[];
     @Input() resetter = false;
 
-    @ViewChild(WidgetDirective) widgetsHost: WidgetDirective;
+    @ViewChild(WidgetDirective, {static: true}) widgetsHost: WidgetDirective;
 
     private widgetObjects: Widget[] = [];
 

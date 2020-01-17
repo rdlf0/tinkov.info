@@ -14,7 +14,7 @@ import { InspirationComponent } from './components/detail/inspiration/inspiratio
 import { DetailsComponent } from './components/detail/details/details.component';
 import { TryComponent } from './components/detail/try/try.component';
 import { FontService } from './services/font.service';
-import { MatSliderModule } from '@angular/material';
+import { MatSliderModule } from '@angular/material/slider';
 import { AbstractWidgetComponent } from './components/control-bar/widgets/widget.component';
 import { SliderComponent as WidgetSlider } from './components/control-bar/widgets/slider/slider.component';
 import { TextAlignComponent as WidgetTextAlign } from './components/control-bar/widgets/text-align/text-align.component';
